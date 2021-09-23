@@ -66,5 +66,11 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    goIndex: () => {
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
     }
 })
