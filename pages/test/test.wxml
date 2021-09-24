@@ -1,2 +1,0 @@
-<!--pages/test/test.wxml-->
-<text bindtap="goIndex">pages/test/test.wxml</text>

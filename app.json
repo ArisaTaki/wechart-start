@@ -2,13 +2,18 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test/test"
+    "pages/qwether/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "startPage",
     "navigationBarTextStyle":"black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "尝试获取位置信息"
+    }
   },
   "tabBar": {
     "list": [{
@@ -22,8 +27,8 @@
       "iconPath": "./static/images/search.png",
       "selectedIconPath": "./static/images/search-actived.png"
     }, {
-      "pagePath": "pages/test/test",
-      "text": "测试",
+      "pagePath": "pages/qwether/index",
+      "text": "和风天气",
       "iconPath": "./static/images/profile.png",
       "selectedIconPath": "./static/images/profile-actived.png"
     }]

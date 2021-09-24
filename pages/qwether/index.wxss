@@ -1,0 +1,5 @@
+/* pages/qwether/index.wxss */
+.map {
+    height: 160px;
+    width: 100%;
+}
