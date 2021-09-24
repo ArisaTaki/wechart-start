@@ -10,10 +10,15 @@
                 </view>
                 <view aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd">
                     <text class="weui-media-box__title">{{item.fxDate}}</text>
-                    <view class="weui-media-box__desc">温度：{{item.tempMin}} - {{item.tempMax}}</view>
+                    <view class="weui-media-box__desc">温度：{{item.tempMin}}°C - {{item.tempMax}}°C</view>
                     <view class="weui-media-box__desc">风向：{{item.windDirDay}} 风力：{{item.windScaleDay}}级</view>
                 </view>
             </navigator>
         </view>
     </view>
 </view>
+
+<!-- 引入页脚 -->
+<import src="../../tpl/footer"></import>
+
+<template is="my-footer"></template>

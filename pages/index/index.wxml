@@ -21,3 +21,8 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+<!-- 引入页脚 -->
+<import src="../../tpl/footer"></import>
+
+<template is="my-footer"></template>

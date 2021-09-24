@@ -1,0 +1,8 @@
+<template name="my-footer">
+    <view class="weui-footer">
+        <view class="weui-footer__links">
+            <navigator class="weui-footer__link weui-wa-hotarea" url="javascript:">thanks for 和风天气</navigator>
+        </view>
+        <view class="weui-footer__text">Copyright &copy; ArisaTaki</view>
+    </view>
+</template>

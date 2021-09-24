@@ -1,0 +1,6 @@
+<!--pages/test/test.wxml-->
+<button type="primary" bindtap="goIndex">跳转到index?</button>
+<!-- 引入页脚 -->
+<import src="../../tpl/footer"></import>
+
+<template is="my-footer"></template>

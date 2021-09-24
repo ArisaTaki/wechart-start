@@ -2,7 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/qwether/index"
+    "pages/qwether/index",
+    "pages/test/test",
+    "pages/test/camera"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -22,8 +24,8 @@
       "iconPath": "./static/images/featured.png",
       "selectedIconPath": "./static/images/featured-actived.png"
     }, {
-      "pagePath": "pages/logs/logs",
-      "text": "日志",
+      "pagePath": "pages/test/test",
+      "text": "测试",
       "iconPath": "./static/images/search.png",
       "selectedIconPath": "./static/images/search-actived.png"
     }, {
