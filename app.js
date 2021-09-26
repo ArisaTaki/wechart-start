@@ -14,27 +14,34 @@ App({
     })
 
     wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: res => {
-              console.log(res)
+        success: res => {
+          if (res.authSetting['scope.userInfo']) {
+            wx.getUserInfo({
+              success: res => {
+                console.log(res)
 
-              this.globalData.userInfo = res.userInfo
+                this.globalData.userInfo = res.userInfo
 
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
+                if (this.userInfoReadyCallback) {
+                  this.userInfoReadyCallback(res)
+                }
               }
-            }
-          })
+            })
+          }
+        },
+        fail: res => {
+          console.log(res)
         }
-      },
-      fail: res => {
-        console.log(res)
-      }
-    })
+      }),
+      // 首先获取地理位置信息
+      wx.getLocation({
+        type: 'gcj02',
+        success: res => {
+          wx.setStorageSync('latitude', res.latitude)
+          wx.setStorageSync('longitude', res.longitude)
+        }
+      })
   },
-
   onShow() {
     console.log('show')
   },
