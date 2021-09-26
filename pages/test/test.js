@@ -5,7 +5,22 @@ Page({
      * 页面的初始数据
      */
     data: {
+        imgUrls: [
+            '/static/images/1.jpg',
+            '/static/images/2.jpg',
+            '/static/images/3.jpg'
+        ],
+        // 是否显示轮播图下点
+        indicatorDots: true,
+        // 是否自动播放
+        autoPlay: true,
+        // 设置轮播间隔时间
+        interval: 3000,
+        // 每个轮播图持续播放时间
+        duration: 1000,
 
+        // 扫描结果
+        scanResult: ""
     },
 
     /**
@@ -64,9 +79,24 @@ Page({
 
     },
 
-    goIndex: function() {
+    goIndex: function () {
         wx.reLaunch({
-          url: '/pages/qwether/index',
+            url: '/pages/qwether/index',
+        })
+    },
+    goToCamera: function () {
+        wx.navigateTo({
+            url: '/pages/test/camera',
+        })
+    },
+    bindScan: function () {
+        wx.scanCode({
+            success: (res) => {
+                console.log(res)
+                this.setData({
+                    scanResult: res.result
+                })
+            }
         })
     }
 })

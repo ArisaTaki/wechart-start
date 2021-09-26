@@ -1,2 +1,12 @@
 <!--pages/test/camera.wxml-->
-<text>pages/test/camera.wxml</text>
+<view class="swiper-view">
+    <camera device-position="back" flash="off" class="camera"></camera>
+    <button type="default" bindtap="takePhoto" class="take-photo">拍照</button>
+    <view class="box-image">
+        <image src="{{src}}" mode="widthFix" alt="" class="image"></image>
+    </view>
+</view>
+
+<!-- 引入页脚 -->
+<import src="../../tpl/footer"></import>
+<template is="my-footer"></template>

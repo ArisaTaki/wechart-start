@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        src: ""
     },
 
     /**
@@ -62,5 +62,17 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    takePhoto: function() {
+        const ctx = wx.createCameraContext()
+        ctx.takePhoto({
+            quality: 'high',
+            success: (res) => {
+                this.setData({
+                    src: res.tempImagePath
+                })
+            }
+        })
     }
 })
